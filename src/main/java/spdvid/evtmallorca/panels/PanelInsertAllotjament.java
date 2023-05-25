@@ -78,9 +78,7 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         btnBack = new javax.swing.JButton();
-        btnInsert = new javax.swing.JButton();
         jLabelnom = new javax.swing.JLabel();
         txtNom = new javax.swing.JTextField();
         txtAdressa = new javax.swing.JTextField();
@@ -92,8 +90,8 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
         jLabelValoracio = new javax.swing.JLabel();
         jLabelPreu = new javax.swing.JLabel();
         jLabelNumPers = new javax.swing.JLabel();
-        jSpinnerNomPers = new javax.swing.JSpinner();
-        jSpinnerPreu = new javax.swing.JSpinner();
+        spnNumPersones = new javax.swing.JSpinner();
+        spnPreu = new javax.swing.JSpinner();
         cmbMunicipi = new javax.swing.JComboBox<>();
         pnlServeis = new javax.swing.JPanel();
         chkPiscina = new javax.swing.JCheckBox();
@@ -103,79 +101,42 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
         chkAparcament = new javax.swing.JCheckBox();
         chkWifi = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
+        btnInsert = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setPreferredSize(new java.awt.Dimension(780, 490));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Imatges"));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 410, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 77, Short.MAX_VALUE)
-        );
-
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 420, -1));
-
-        btnBack.setText("< Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-back-24 (1).png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 90, 40));
-
-        btnInsert.setText("Insertar");
-        btnInsert.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInsertActionPerformed(evt);
-            }
-        });
-        add(btnInsert, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, 80, 40));
 
         jLabelnom.setText("Nom:");
-        add(jLabelnom, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
 
         txtNom.setText("jTextField1");
-        add(txtNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 137, -1));
 
         txtAdressa.setText("jTextField1");
-        add(txtAdressa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 137, -1));
 
         jLabelAdressa.setText("Adressa:");
-        add(jLabelAdressa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         txtDescripcio.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtDescripcio.setText("jTextField1");
-        add(txtDescripcio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 420, 82));
 
         jLabelDescripcio.setText("Descripcio: ");
-        add(jLabelDescripcio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         jLabelMunicipi.setText("Municipi: ");
-        add(jLabelMunicipi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
 
         txtValoracio.setText("jTextField1");
-        add(txtValoracio, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, -1, -1));
 
         jLabelValoracio.setText("Valoració:");
-        add(jLabelValoracio, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, -1, -1));
 
         jLabelPreu.setText("Preu:");
-        add(jLabelPreu, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, -1, -1));
 
         jLabelNumPers.setText("Nº de Personas:");
-        add(jLabelNumPers, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, -1, -1));
-        add(jSpinnerNomPers, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 84, -1));
-        add(jSpinnerPreu, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, -1, -1));
 
         cmbMunicipi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alaró", "Inca" }));
-        add(cmbMunicipi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 137, -1));
 
         pnlServeis.setBorder(javax.swing.BorderFactory.createTitledBorder("Serveis"));
 
@@ -233,25 +194,126 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
                 .addGap(0, 15, Short.MAX_VALUE))
         );
 
-        add(pnlServeis, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 270, 110));
-
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, 20));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-hotel-bed-48.png"))); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-verified-scroll-48 (1).png"))); // NOI18N
         jLabel1.setText(" Nou Allotjament");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 220, -1));
+
+        btnInsert.setLabel("Insertar");
+        btnInsert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInsertActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabelnom)
+                        .addGap(130, 130, 130)
+                        .addComponent(jLabelValoracio)
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabelPreu)
+                        .addGap(53, 53, 53)
+                        .addComponent(jLabelNumPers))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(txtNom, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addComponent(txtValoracio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19)
+                        .addComponent(spnPreu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)
+                        .addComponent(spnNumPersones, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabelDescripcio))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(txtDescripcio, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(370, 370, 370)
+                        .addComponent(btnInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelAdressa)
+                            .addComponent(txtAdressa, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelMunicipi)
+                            .addComponent(cmbMunicipi, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(13, 13, 13)
+                        .addComponent(pnlServeis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(34, Short.MAX_VALUE))
+            .addComponent(jSeparator1)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(btnBack))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelnom)
+                    .addComponent(jLabelValoracio)
+                    .addComponent(jLabelPreu)
+                    .addComponent(jLabelNumPers))
+                .addGap(4, 4, 4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtValoracio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spnPreu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spnNumPersones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelAdressa)
+                        .addGap(4, 4, 4)
+                        .addComponent(txtAdressa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabelMunicipi)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cmbMunicipi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pnlServeis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(jLabelDescripcio)
+                .addGap(4, 4, 4)
+                .addComponent(txtDescripcio, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addComponent(btnInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         mainJFrame.showPnlLlistaAllotjaments();
     }//GEN-LAST:event_btnBackActionPerformed
 
+    private void chkMascotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkMascotesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chkMascotesActionPerformed
+
     private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertActionPerformed
+        // TODO add your handling code here:
         allotjament = new Allotjament();
         allotjament.setNom(txtNom.getText());
-        allotjament.setAdresa(txtAdresa.getText());
+        allotjament.setAdresa(txtAdressa.getText());
         allotjament.setMunicipi(cmbMunicipi.getSelectedItem().toString());
-        allotjament.setId_municipi(cmbMunicipi.getSelectedIndex()+1);
-        allotjament.setDescripcio(txaDescripcio.getText());
+        allotjament.setId_municipi(cmbMunicipi.getSelectedIndex() + 1);
+        allotjament.setDescripcio(txtDescripcio.getText());
         try {
             spnNumPersones.commitEdit();
         } catch (java.text.ParseException e) {
@@ -259,15 +321,15 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
         }
         allotjament.setNum_persones((Integer) spnNumPersones.getValue());
         allotjament.setId_propietari(mainJFrame.getAuthenticatedUser().getId());
-        float preuPerNit = Float.parseFloat(txtPreuNit.getText());
+        float preuPerNit = Float.parseFloat(spnPreu.getValue().toString());
         allotjament.setPreu_per_nit(preuPerNit);
         int idNouAllotjament = da.insertAllotjament(allotjament);
-        
+
         if (idNouAllotjament <= 0) {
             JOptionPane.showMessageDialog(mainJFrame, "Error inserting new allotjament.");
             return;
         }
-        
+
         if (chkPiscina.isSelected()) {
             da.insertServei(1, idNouAllotjament);
         }
@@ -286,15 +348,12 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
         if (chkWifi.isSelected()) {
             da.insertServei(6, idNouAllotjament);
         }
-        
-        JOptionPane.showMessageDialog(mainJFrame, "Allotjament inserted correctly.");
-        
-        mainJFrame.reloadPnlLlistaAllotjaments();
-    }//GEN-LAST:event_btnInsertActionPerformed
 
-    private void chkMascotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkMascotesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chkMascotesActionPerformed
+        JOptionPane.showMessageDialog(mainJFrame, "Allotjament inserted correctly.");
+
+        mainJFrame.reloadPnlLlistaAllotjaments();
+
+    }//GEN-LAST:event_btnInsertActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -315,10 +374,10 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
     private javax.swing.JLabel jLabelPreu;
     private javax.swing.JLabel jLabelValoracio;
     private javax.swing.JLabel jLabelnom;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner jSpinnerNomPers;
-    private javax.swing.JSpinner jSpinnerPreu;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel pnlServeis;
+    private javax.swing.JSpinner spnNumPersones;
+    private javax.swing.JSpinner spnPreu;
     private javax.swing.JTextField txtAdressa;
     private javax.swing.JTextField txtDescripcio;
     private javax.swing.JTextField txtNom;
