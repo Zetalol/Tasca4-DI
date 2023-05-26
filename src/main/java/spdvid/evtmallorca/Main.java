@@ -42,6 +42,7 @@ public class Main extends javax.swing.JFrame {
         }
         initComponents();
         pack();
+        btnLogout.setVisible(false);
 
     }
 
@@ -60,7 +61,7 @@ public class Main extends javax.swing.JFrame {
         btnLogout = new javax.swing.JButton();
         lblWelcomeMessage = new javax.swing.JLabel();
         pnlMain = new javax.swing.JPanel();
-        lblLogo = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 600));
@@ -73,9 +74,13 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        lblTitle.setFont(new java.awt.Font("Roboto Black", 0, 48)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Roboto Black", 0, 36)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-hotel-60.png"))); // NOI18N
         lblTitle.setText("EVT MALLORCA");
+        lblTitle.setIconTextGap(10);
 
+        btnShowLoginDialog.setForeground(new java.awt.Color(255, 255, 255));
         btnShowLoginDialog.setText("Login");
         btnShowLoginDialog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +88,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        btnLogout.setForeground(new java.awt.Color(255, 255, 255));
         btnLogout.setText("Sign out");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +96,8 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        lblWelcomeMessage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblWelcomeMessage.setForeground(new java.awt.Color(255, 255, 255));
+        lblWelcomeMessage.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblWelcomeMessage.setText("Welcome username");
         lblWelcomeMessage.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 
@@ -99,52 +106,46 @@ public class Main extends javax.swing.JFrame {
         pnlHeaderLayout.setHorizontalGroup(
             pnlHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlHeaderLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(75, 75, 75)
+                .addGap(62, 62, 62)
+                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblWelcomeMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlHeaderLayout.createSequentialGroup()
                         .addComponent(btnShowLoginDialog)
                         .addGap(18, 18, 18)
-                        .addComponent(btnLogout)))
+                        .addComponent(btnLogout))
+                    .addComponent(lblWelcomeMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         pnlHeaderLayout.setVerticalGroup(
             pnlHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlHeaderLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHeaderLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblWelcomeMessage)
-                .addGap(4, 4, 4)
                 .addGroup(pnlHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnShowLoginDialog)
-                    .addComponent(btnLogout))
-                .addGap(18, 18, 18))
+                    .addGroup(pnlHeaderLayout.createSequentialGroup()
+                        .addComponent(lblWelcomeMessage)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnlHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnShowLoginDialog)
+                            .addComponent(btnLogout))
+                        .addGap(18, 18, 18))
+                    .addGroup(pnlHeaderLayout.createSequentialGroup()
+                        .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
 
         pnlMain.setMinimumSize(new java.awt.Dimension(780, 700));
         pnlMain.setPreferredSize(new java.awt.Dimension(780, 700));
 
-        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
-
         javax.swing.GroupLayout pnlMainLayout = new javax.swing.GroupLayout(pnlMain);
         pnlMain.setLayout(pnlMainLayout);
         pnlMainLayout.setHorizontalGroup(
             pnlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlMainLayout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         pnlMainLayout.setVerticalGroup(
             pnlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlMainLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,18 +154,22 @@ public class Main extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(pnlHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jSeparator1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(pnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(8, 8, 8)
                 .addComponent(pnlHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, 649, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(pnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -179,7 +184,8 @@ public class Main extends javax.swing.JFrame {
         LoginDialog loginDialog = new LoginDialog(this, true);
         loginDialog.setVisible(true);
         if (authenticatedUser != null) {
-            btnShowLoginDialog.setEnabled(false);
+            btnShowLoginDialog.setVisible(false);
+            btnLogout.setVisible(true);
             btnLogout.setEnabled(true);
             lblWelcomeMessage.setText("Welcome " + authenticatedUser.getNom());
             lblWelcomeMessage.setVisible(true);
@@ -192,12 +198,11 @@ public class Main extends javax.swing.JFrame {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         authenticatedUser = null;
-        btnShowLoginDialog.setEnabled(true);
-        btnLogout.setEnabled(false);
+        btnShowLoginDialog.setVisible(true);
+        btnLogout.setVisible(false);
         lblWelcomeMessage.setText("Nobody is logged in.");
         lblWelcomeMessage.setVisible(false);
         pnlMain.removeAll();
-        pnlMain.add(lblLogo);
         pnlMain.repaint();
     }//GEN-LAST:event_btnLogoutActionPerformed
 
@@ -284,7 +289,7 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnShowLoginDialog;
-    private javax.swing.JLabel lblLogo;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblWelcomeMessage;
     private javax.swing.JPanel pnlHeader;

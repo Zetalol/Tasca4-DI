@@ -115,20 +115,13 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
 
         jLabelnom.setText("Nom:");
 
-        txtNom.setText("jTextField1");
-
-        txtAdressa.setText("jTextField1");
-
         jLabelAdressa.setText("Adressa:");
 
         txtDescripcio.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtDescripcio.setText("jTextField1");
 
         jLabelDescripcio.setText("Descripcio: ");
 
         jLabelMunicipi.setText("Municipi: ");
-
-        txtValoracio.setText("jTextField1");
 
         jLabelValoracio.setText("Valoració:");
 
@@ -229,8 +222,8 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addComponent(txtNom, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23)
-                        .addComponent(txtValoracio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtValoracio, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19)
                         .addComponent(spnPreu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(16, 16, 16)
@@ -253,7 +246,7 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
                             .addComponent(cmbMunicipi, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(13, 13, 13)
                         .addComponent(pnlServeis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
             .addComponent(jSeparator1)
         );
         layout.setVerticalGroup(

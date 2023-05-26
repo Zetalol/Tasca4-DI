@@ -20,7 +20,9 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
         initComponents();
         this.mainJFrame = mainJFrame;
         setSize(780, 490);
-        tblAllotjaments.setModel(new AllotjamentTableModel((da.getAllotjaments(userId))));  
+        tblAllotjaments.setModel(new AllotjamentTableModel((da.getAllotjaments(userId)))); 
+        int total = tblAllotjaments.getRowCount();
+        lblNumEstabliments.setText("S'han trobat " + total + " establiments.");
     }
 
     /**
@@ -35,10 +37,12 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblAllotjaments = new javax.swing.JTable();
         btnShowInsertPanel = new javax.swing.JButton();
+        lblNumEstabliments = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(780, 490));
         setLayout(null);
 
+        tblAllotjaments.setForeground(new java.awt.Color(255, 255, 255));
         tblAllotjaments.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -50,6 +54,9 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblAllotjaments.setMaximumSize(new java.awt.Dimension(300, 80));
+        tblAllotjaments.setName(""); // NOI18N
+        tblAllotjaments.setSelectionForeground(new java.awt.Color(255, 255, 255));
         tblAllotjaments.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblAllotjamentsMouseClicked(evt);
@@ -58,16 +65,23 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblAllotjaments);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(10, 10, 590, 402);
+        jScrollPane2.setBounds(10, 40, 590, 402);
 
-        btnShowInsertPanel.setText("New...");
+        btnShowInsertPanel.setForeground(new java.awt.Color(255, 255, 255));
+        btnShowInsertPanel.setText("Crear Nuevo");
         btnShowInsertPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnShowInsertPanelActionPerformed(evt);
             }
         });
         add(btnShowInsertPanel);
-        btnShowInsertPanel.setBounds(495, 420, 90, 23);
+        btnShowInsertPanel.setBounds(470, 450, 120, 30);
+
+        lblNumEstabliments.setForeground(new java.awt.Color(255, 255, 255));
+        lblNumEstabliments.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblNumEstabliments.setText("S'han trobat x establiments.");
+        add(lblNumEstabliments);
+        lblNumEstabliments.setBounds(17, 10, 580, 16);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblAllotjamentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAllotjamentsMouseClicked
@@ -89,6 +103,7 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnShowInsertPanel;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblNumEstabliments;
     private javax.swing.JTable tblAllotjaments;
     // End of variables declaration//GEN-END:variables
 }

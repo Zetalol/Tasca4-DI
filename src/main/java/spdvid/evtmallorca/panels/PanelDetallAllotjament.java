@@ -254,8 +254,11 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
         cmbMunicipi.setBounds(29, 224, 137, 22);
 
         pnlServeis.setBorder(javax.swing.BorderFactory.createTitledBorder("Serveis"));
+        pnlServeis.setLayout(null);
 
         chkPiscina.setText("Piscina");
+        pnlServeis.add(chkPiscina);
+        chkPiscina.setBounds(5, 18, 60, 20);
 
         chkMascotes.setText("Mascotes");
         chkMascotes.addActionListener(new java.awt.event.ActionListener() {
@@ -263,51 +266,24 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
                 chkMascotesActionPerformed(evt);
             }
         });
+        pnlServeis.add(chkMascotes);
+        chkMascotes.setBounds(5, 44, 73, 20);
 
         chkAscensor.setText("Ascensor");
+        pnlServeis.add(chkAscensor);
+        chkAscensor.setBounds(5, 70, 71, 20);
 
         chkAireAcondicionat.setText("Aire Acondicionat");
+        pnlServeis.add(chkAireAcondicionat);
+        chkAireAcondicionat.setBounds(97, 18, 118, 20);
 
         chkAparcament.setText("Aparcament");
+        pnlServeis.add(chkAparcament);
+        chkAparcament.setBounds(96, 44, 88, 20);
 
         chkWifi.setText("Wifi");
-
-        javax.swing.GroupLayout pnlServeisLayout = new javax.swing.GroupLayout(pnlServeis);
-        pnlServeis.setLayout(pnlServeisLayout);
-        pnlServeisLayout.setHorizontalGroup(
-            pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlServeisLayout.createSequentialGroup()
-                .addGroup(pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlServeisLayout.createSequentialGroup()
-                        .addComponent(chkPiscina)
-                        .addGap(32, 32, 32)
-                        .addComponent(chkAireAcondicionat))
-                    .addGroup(pnlServeisLayout.createSequentialGroup()
-                        .addGroup(pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(chkAscensor)
-                            .addComponent(chkMascotes))
-                        .addGap(18, 18, 18)
-                        .addGroup(pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(chkAparcament)
-                            .addComponent(chkWifi))))
-                .addGap(0, 38, Short.MAX_VALUE))
-        );
-        pnlServeisLayout.setVerticalGroup(
-            pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlServeisLayout.createSequentialGroup()
-                .addGroup(pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chkPiscina)
-                    .addComponent(chkAireAcondicionat))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chkAparcament)
-                    .addComponent(chkMascotes))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chkWifi)
-                    .addComponent(chkAscensor))
-                .addGap(0, 15, Short.MAX_VALUE))
-        );
+        pnlServeis.add(chkWifi);
+        chkWifi.setBounds(96, 70, 44, 20);
 
         add(pnlServeis);
         pnlServeis.setBounds(184, 140, 258, 110);

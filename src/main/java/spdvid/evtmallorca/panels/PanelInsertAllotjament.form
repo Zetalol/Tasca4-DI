@@ -42,9 +42,9 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
                       <Component id="txtNom" min="-2" pref="137" max="-2" attributes="0"/>
-                      <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
-                      <Component id="txtValoracio" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="txtValoracio" min="-2" pref="76" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Component id="spnPreu" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
                       <Component id="spnNumPersones" min="-2" pref="84" max="-2" attributes="0"/>
@@ -73,7 +73,7 @@
                       <Component id="pnlServeis" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="34" max="32767" attributes="0"/>
+              <EmptySpace pref="17" max="32767" attributes="0"/>
           </Group>
           <Component id="jSeparator1" max="32767" attributes="0"/>
       </Group>
@@ -143,14 +143,8 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNom">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtAdressa">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelAdressa">
       <Properties>
@@ -160,7 +154,6 @@
     <Component class="javax.swing.JTextField" name="txtDescripcio">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelDescripcio">
@@ -174,9 +167,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtValoracio">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelValoracio">
       <Properties>
