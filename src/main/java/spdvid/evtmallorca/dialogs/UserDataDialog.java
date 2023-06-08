@@ -1,7 +1,5 @@
 package spdvid.evtmallorca.dialogs;
 
-import javax.swing.JFrame;
-import spdvid.evtmallorca.Main;
 import spdvid.evtmallorca.dataaccess.DataAccess;
 import spdvid.garciajodar_tarea1.dto.Usuari;
 
@@ -111,6 +109,8 @@ public class UserDataDialog extends javax.swing.JDialog {
         user.setLlinatges(txtLlinatges.getText());
         user.setEmail(txtEmail.getText());
         user.setPassword(txtPassword.getText());
+        
+        
         da.updateUser(user);
     }//GEN-LAST:event_btnUpdateActionPerformed
 

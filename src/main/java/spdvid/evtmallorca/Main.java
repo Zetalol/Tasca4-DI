@@ -1,9 +1,7 @@
 package spdvid.evtmallorca;
 
 import com.formdev.flatlaf.FlatDarculaLaf;
-import com.formdev.flatlaf.ui.FlatCheckBoxUI;
 import java.awt.Font;
-import javax.swing.JCheckBox;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -242,7 +240,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     public void showPnlDetallAllotjament(Allotjament allotjament) {
-        pnlDetallAllotjament = new PanelDetallAllotjament(allotjament, this);
+        pnlDetallAllotjament = new PanelDetallAllotjament(allotjament, this, authenticatedUser);
         pnlMain.removeAll();
         pnlMain.add(pnlDetallAllotjament);
         pnlMain.repaint();
