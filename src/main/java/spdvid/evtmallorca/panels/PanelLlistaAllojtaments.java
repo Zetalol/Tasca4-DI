@@ -38,6 +38,8 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
         tblAllotjaments = new javax.swing.JTable();
         btnShowInsertPanel = new javax.swing.JButton();
         lblNumEstabliments = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setPreferredSize(new java.awt.Dimension(780, 490));
         setLayout(null);
@@ -65,23 +67,37 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblAllotjaments);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(10, 40, 590, 402);
+        jScrollPane2.setBounds(10, 120, 590, 402);
 
         btnShowInsertPanel.setForeground(new java.awt.Color(255, 255, 255));
-        btnShowInsertPanel.setText("Crear Nuevo");
+        btnShowInsertPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-más-24.png"))); // NOI18N
+        btnShowInsertPanel.setText("Nou");
+        btnShowInsertPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnShowInsertPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnShowInsertPanelActionPerformed(evt);
             }
         });
         add(btnShowInsertPanel);
-        btnShowInsertPanel.setBounds(470, 450, 120, 30);
+        btnShowInsertPanel.setBounds(10, 80, 90, 30);
 
         lblNumEstabliments.setForeground(new java.awt.Color(255, 255, 255));
         lblNumEstabliments.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblNumEstabliments.setText("S'han trobat x establiments.");
         add(lblNumEstabliments);
-        lblNumEstabliments.setBounds(17, 10, 580, 16);
+        lblNumEstabliments.setBounds(20, 90, 580, 16);
+
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, 18));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-dormitorio-48.png"))); // NOI18N
+        jLabel1.setText("Els Teus Allotjaments");
+        add(jLabel1);
+        jLabel1.setBounds(10, 15, 600, 40);
+
+        jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
+        add(jSeparator1);
+        jSeparator1.setBounds(-10, 70, 630, 10);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblAllotjamentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAllotjamentsMouseClicked
@@ -102,7 +118,9 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnShowInsertPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblNumEstabliments;
     private javax.swing.JTable tblAllotjaments;
     // End of variables declaration//GEN-END:variables

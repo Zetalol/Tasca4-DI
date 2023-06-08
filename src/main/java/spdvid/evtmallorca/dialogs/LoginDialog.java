@@ -39,6 +39,10 @@ public class LoginDialog extends javax.swing.JDialog {
         btnLogin = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
         lblLoginErrorMessage = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -47,11 +51,11 @@ public class LoginDialog extends javax.swing.JDialog {
 
         txtEmail.setText("eforbearb@ucsd.edu");
         getContentPane().add(txtEmail);
-        txtEmail.setBounds(110, 80, 180, 22);
+        txtEmail.setBounds(110, 160, 180, 22);
 
         txtPassword.setText("oSko03");
         getContentPane().add(txtPassword);
-        txtPassword.setBounds(120, 130, 140, 22);
+        txtPassword.setBounds(110, 220, 180, 22);
 
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -60,21 +64,39 @@ public class LoginDialog extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btnLogin);
-        btnLogin.setBounds(94, 222, 72, 23);
+        btnLogin.setBounds(110, 270, 180, 23);
 
-        btnCancel.setText("Cancel");
+        btnCancel.setText("X");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
             }
         });
         getContentPane().add(btnCancel);
-        btnCancel.setBounds(206, 222, 72, 23);
+        btnCancel.setBounds(332, 10, 60, 40);
 
         lblLoginErrorMessage.setForeground(new java.awt.Color(255, 51, 51));
         lblLoginErrorMessage.setText("Login failed. Try again!");
         getContentPane().add(lblLoginErrorMessage);
-        lblLoginErrorMessage.setBounds(142, 179, 119, 16);
+        lblLoginErrorMessage.setBounds(110, 100, 180, 16);
+
+        jLabel1.setText("Usuari");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(110, 130, 180, 16);
+
+        jLabel2.setText("Contrasenya:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(110, 200, 180, 16);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(0, 80, 410, 20);
+
+        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD, 18));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-accede-redondeado-derecho-48.png"))); // NOI18N
+        jLabel3.setText("Login");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 360, 70);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -140,6 +162,10 @@ public class LoginDialog extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnLogin;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblLoginErrorMessage;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JPasswordField txtPassword;

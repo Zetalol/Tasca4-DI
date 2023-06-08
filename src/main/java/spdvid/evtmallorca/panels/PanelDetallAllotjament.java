@@ -138,8 +138,10 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
         chkWifi = new javax.swing.JCheckBox();
         jScrollPane2 = new javax.swing.JScrollPane();
         txaComentaris = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
-        setPreferredSize(new java.awt.Dimension(780, 700));
+        setPreferredSize(new java.awt.Dimension(900, 700));
         setLayout(null);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Imatges"));
@@ -156,9 +158,10 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
         );
 
         add(jPanel1);
-        jPanel1.setBounds(30, 380, 710, 160);
+        jPanel1.setBounds(30, 390, 710, 160);
 
-        btnBack.setText(" < Atras");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-back-24 (1).png"))); // NOI18N
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.setMaximumSize(new java.awt.Dimension(86, 23));
         btnBack.setMinimumSize(new java.awt.Dimension(86, 23));
         btnBack.setPreferredSize(new java.awt.Dimension(86, 23));
@@ -170,95 +173,98 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(30, 20, 90, 30);
 
-        btnPrevImage.setText("<");
+        btnPrevImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-back-24 (1).png"))); // NOI18N
+        btnPrevImage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         add(btnPrevImage);
-        btnPrevImage.setBounds(620, 570, 40, 23);
+        btnPrevImage.setBounds(620, 580, 40, 31);
 
-        btnNextImage.setText(">");
+        btnNextImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-adelante-24 (2).png"))); // NOI18N
+        btnNextImage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         add(btnNextImage);
-        btnNextImage.setBounds(690, 570, 40, 23);
+        btnNextImage.setBounds(690, 580, 40, 31);
 
         chkAutoMan.setText("Auto");
+        chkAutoMan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        chkAutoMan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-play-24.png"))); // NOI18N
+        chkAutoMan.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-pausa-24 (1).png"))); // NOI18N
         add(chkAutoMan);
-        chkAutoMan.setBounds(40, 560, 85, 20);
+        chkAutoMan.setBounds(40, 570, 80, 28);
 
         lblImageFileName.setText("Nom del fitxer de imatge i tamany en KB");
         lblImageFileName.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         add(lblImageFileName);
-        lblImageFileName.setBounds(110, 570, 260, 30);
+        lblImageFileName.setBounds(120, 570, 260, 30);
 
         jLabelnom.setText("Nom:");
         add(jLabelnom);
-        jLabelnom.setBounds(29, 80, 30, 16);
+        jLabelnom.setBounds(30, 90, 30, 16);
 
         txtNom.setText("jTextField1");
         add(txtNom);
-        txtNom.setBounds(29, 102, 137, 22);
+        txtNom.setBounds(30, 110, 137, 22);
 
         txtAdressa.setText("jTextField1");
         add(txtAdressa);
-        txtAdressa.setBounds(29, 162, 137, 22);
+        txtAdressa.setBounds(30, 170, 137, 22);
 
         jLabelAdressa.setText("Adressa:");
         add(jLabelAdressa);
-        jLabelAdressa.setBounds(29, 140, 44, 16);
+        jLabelAdressa.setBounds(30, 150, 44, 16);
 
         txtDescripcio.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtDescripcio.setText("jTextField1");
         add(txtDescripcio);
-        txtDescripcio.setBounds(29, 280, 410, 82);
+        txtDescripcio.setBounds(30, 290, 410, 82);
 
         jLabelDescripcio.setText("Descripcio: ");
         add(jLabelDescripcio);
-        jLabelDescripcio.setBounds(29, 258, 61, 16);
+        jLabelDescripcio.setBounds(30, 270, 61, 16);
 
         jLabelMunicipi.setText("Municipi: ");
         add(jLabelMunicipi);
-        jLabelMunicipi.setBounds(29, 196, 53, 16);
+        jLabelMunicipi.setBounds(30, 210, 53, 16);
 
         txtValoracio.setText("jTextField1");
         add(txtValoracio);
-        txtValoracio.setBounds(187, 102, 71, 22);
+        txtValoracio.setBounds(190, 110, 71, 22);
 
         jLabelValoracio.setText("Valoració:");
         add(jLabelValoracio);
-        jLabelValoracio.setBounds(187, 80, 52, 16);
+        jLabelValoracio.setBounds(190, 90, 52, 16);
 
         jLabelPreu.setText("Preu:");
         add(jLabelPreu);
-        jLabelPreu.setBounds(276, 80, 27, 16);
+        jLabelPreu.setBounds(280, 90, 27, 16);
 
         jLabelComentaris.setText("Comentaris:");
         add(jLabelComentaris);
-        jLabelComentaris.setBounds(470, 80, 64, 16);
+        jLabelComentaris.setBounds(470, 90, 64, 16);
 
         jButtonActualitzar.setText("Actualitzar");
+        jButtonActualitzar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonActualitzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonActualitzarActionPerformed(evt);
             }
         });
         add(jButtonActualitzar);
-        jButtonActualitzar.setBounds(600, 20, 137, 33);
+        jButtonActualitzar.setBounds(600, 20, 137, 30);
 
         jLabelNumPers.setText("Nº de Personas:");
         add(jLabelNumPers);
-        jLabelNumPers.setBounds(359, 80, 83, 16);
+        jLabelNumPers.setBounds(360, 90, 83, 16);
         add(spnNumPersones);
-        spnNumPersones.setBounds(358, 102, 84, 22);
+        spnNumPersones.setBounds(360, 110, 84, 22);
         add(spnPreu);
-        spnPreu.setBounds(276, 102, 64, 22);
+        spnPreu.setBounds(280, 110, 64, 22);
 
         cmbMunicipi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alaró", "Inca" }));
         add(cmbMunicipi);
-        cmbMunicipi.setBounds(29, 224, 137, 22);
+        cmbMunicipi.setBounds(30, 240, 137, 22);
 
         pnlServeis.setBorder(javax.swing.BorderFactory.createTitledBorder("Serveis"));
-        pnlServeis.setLayout(null);
 
         chkPiscina.setText("Piscina");
-        pnlServeis.add(chkPiscina);
-        chkPiscina.setBounds(5, 18, 60, 20);
 
         chkMascotes.setText("Mascotes");
         chkMascotes.addActionListener(new java.awt.event.ActionListener() {
@@ -266,34 +272,69 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
                 chkMascotesActionPerformed(evt);
             }
         });
-        pnlServeis.add(chkMascotes);
-        chkMascotes.setBounds(5, 44, 73, 20);
 
         chkAscensor.setText("Ascensor");
-        pnlServeis.add(chkAscensor);
-        chkAscensor.setBounds(5, 70, 71, 20);
 
         chkAireAcondicionat.setText("Aire Acondicionat");
-        pnlServeis.add(chkAireAcondicionat);
-        chkAireAcondicionat.setBounds(97, 18, 118, 20);
 
         chkAparcament.setText("Aparcament");
-        pnlServeis.add(chkAparcament);
-        chkAparcament.setBounds(96, 44, 88, 20);
 
         chkWifi.setText("Wifi");
-        pnlServeis.add(chkWifi);
-        chkWifi.setBounds(96, 70, 44, 20);
+
+        javax.swing.GroupLayout pnlServeisLayout = new javax.swing.GroupLayout(pnlServeis);
+        pnlServeis.setLayout(pnlServeisLayout);
+        pnlServeisLayout.setHorizontalGroup(
+            pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlServeisLayout.createSequentialGroup()
+                .addComponent(chkPiscina)
+                .addGap(32, 32, 32)
+                .addComponent(chkAireAcondicionat))
+            .addGroup(pnlServeisLayout.createSequentialGroup()
+                .addComponent(chkMascotes)
+                .addGap(18, 18, 18)
+                .addComponent(chkAparcament))
+            .addGroup(pnlServeisLayout.createSequentialGroup()
+                .addComponent(chkAscensor)
+                .addGap(20, 20, 20)
+                .addComponent(chkWifi))
+        );
+        pnlServeisLayout.setVerticalGroup(
+            pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlServeisLayout.createSequentialGroup()
+                .addGroup(pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkPiscina)
+                    .addComponent(chkAireAcondicionat))
+                .addGap(6, 6, 6)
+                .addGroup(pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkMascotes)
+                    .addComponent(chkAparcament))
+                .addGap(6, 6, 6)
+                .addGroup(pnlServeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkAscensor)
+                    .addComponent(chkWifi)))
+        );
 
         add(pnlServeis);
-        pnlServeis.setBounds(184, 140, 258, 110);
+        pnlServeis.setBounds(180, 150, 260, 110);
 
         txaComentaris.setColumns(20);
         txaComentaris.setRows(5);
         jScrollPane2.setViewportView(txaComentaris);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(470, 110, 270, 250);
+        jScrollPane2.setBounds(470, 120, 270, 250);
+
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, 18));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-información-del-hotel-48 (1).png"))); // NOI18N
+        jLabel1.setText("Detalls de l'Allotjament");
+        add(jLabel1);
+        jLabel1.setBounds(180, 10, 390, 50);
+
+        jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
+        add(jSeparator1);
+        jSeparator1.setBounds(-20, 70, 850, 10);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -362,6 +403,7 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
     private javax.swing.JCheckBox chkWifi;
     private javax.swing.JComboBox<String> cmbMunicipi;
     private javax.swing.JButton jButtonActualitzar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAdressa;
     private javax.swing.JLabel jLabelComentaris;
     private javax.swing.JLabel jLabelDescripcio;
@@ -372,6 +414,7 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
     private javax.swing.JLabel jLabelnom;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblImageFileName;
     private javax.swing.JPanel pnlServeis;
     private javax.swing.JSpinner spnNumPersones;

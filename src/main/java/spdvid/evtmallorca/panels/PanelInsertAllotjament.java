@@ -104,9 +104,11 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
         btnInsert = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
 
+        setForeground(new java.awt.Color(153, 153, 153));
         setPreferredSize(new java.awt.Dimension(780, 490));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-back-24 (1).png"))); // NOI18N
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -187,17 +189,20 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
                 .addGap(0, 15, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, 20));
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, 18));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-verified-scroll-48 (1).png"))); // NOI18N
         jLabel1.setText(" Nou Allotjament");
 
+        btnInsert.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInsert.setLabel("Insertar");
         btnInsert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInsertActionPerformed(evt);
             }
         });
+
+        jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -246,7 +251,7 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
                             .addComponent(cmbMunicipi, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(13, 13, 13)
                         .addComponent(pnlServeis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
             .addComponent(jSeparator1)
         );
         layout.setVerticalGroup(
@@ -293,6 +298,7 @@ public class PanelInsertAllotjament extends javax.swing.JPanel {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         mainJFrame.showPnlLlistaAllotjaments();
+        mainJFrame.setSize(600,700);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void chkMascotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkMascotesActionPerformed
