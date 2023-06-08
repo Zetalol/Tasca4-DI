@@ -8,6 +8,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import spdvid.evtmallorca.dialogs.LoginDialog;
+import spdvid.evtmallorca.dialogs.UserDataDialog;
 import spdvid.evtmallorca.dto.Allotjament;
 import spdvid.evtmallorca.panels.PanelDetallAllotjament;
 import spdvid.evtmallorca.panels.PanelInsertAllotjament;
@@ -47,7 +48,7 @@ public class Main extends javax.swing.JFrame {
         pnlMain.setVisible(false);
         lblWelcomeMessage.setText("No hi ha ningu connectat.");
         lblWelcomeMessage.setVisible(true);
-        this.setSize(550, 200);
+        this.setSize(600, 500);
 
     }
 
@@ -111,6 +112,11 @@ public class Main extends javax.swing.JFrame {
         lblWelcomeMessage.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 
         btnUserData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-encuentra-hombre-usuario-48.png"))); // NOI18N
+        btnUserData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUserDataActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -191,6 +197,7 @@ public class Main extends javax.swing.JFrame {
     private void btnShowLoginDialogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowLoginDialogActionPerformed
         LoginDialog loginDialog = new LoginDialog(this, true);
         loginDialog.setVisible(true);
+        loginDialog.setLocationRelativeTo(null);
         if (authenticatedUser != null) {
             btnShowLoginDialog.setVisible(false);
             btnLogout.setVisible(true);
@@ -222,6 +229,13 @@ public class Main extends javax.swing.JFrame {
         //btnLogout.setVisible(false);
         lblWelcomeMessage.setVisible(false);
     }//GEN-LAST:event_formWindowOpened
+
+    private void btnUserDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserDataActionPerformed
+        // TODO add your handling code here:
+        UserDataDialog userDialog = new UserDataDialog(this, true, authenticatedUser);
+        userDialog.setVisible(true);
+        userDialog.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnUserDataActionPerformed
 
     public void userLoggedIn(Usuari user) {
         authenticatedUser = user;

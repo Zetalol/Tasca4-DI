@@ -126,6 +126,22 @@ public class DataAccess {
         return user;
     }
 
+    public void updateUser(Usuari user) {
+        String sql = "UPDATE usuari SET nom = ?, llinatges = ?, email = ?, password = ?, isAdmin = ? WHERE id = ?";
+        try ( Connection connection = getConnection();  PreparedStatement updateStatement = connection.prepareStatement(sql);) {
+            updateStatement.setString(1, user.getNom());
+            updateStatement.setString(2, user.getLlinatges());
+            updateStatement.setString(3, user.getEmail());
+            updateStatement.setString(4, user.getPassword());
+            updateStatement.setBoolean(5, user.isAdmin());
+            updateStatement.setInt(6, user.getId());
+            int rowsAffected = updateStatement.executeUpdate();
+            System.out.println("Filas actualizadas: " + rowsAffected);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public ArrayList<Allotjament> getAllotjaments(int userId) {
         ArrayList<Allotjament> allotjaments = new ArrayList<>();
         String sql = "SELECT allotjament.id AS id_allotjament, allotjament.nom AS nom_allotjament, descripcio, adresa,"
