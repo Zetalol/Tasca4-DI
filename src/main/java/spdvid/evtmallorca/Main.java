@@ -40,7 +40,6 @@ public class Main extends javax.swing.JFrame {
             System.out.println(e);
         }
         initComponents();
-        pack();
         btnLogout.setVisible(false);
         btnUserData.setVisible(false);
         pnlMain.setVisible(false);
@@ -116,6 +115,8 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        jSeparator1.setMinimumSize(new java.awt.Dimension(900, 0));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -137,7 +138,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(lblWelcomeMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(btnUserData, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(205, Short.MAX_VALUE)))
+                    .addContainerGap(193, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,8 +168,6 @@ public class Main extends javax.swing.JFrame {
                     .addContainerGap(9, Short.MAX_VALUE)))
         );
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
-
         pnlMain.setMinimumSize(new java.awt.Dimension(780, 700));
         pnlMain.setPreferredSize(new java.awt.Dimension(780, 700));
 
@@ -180,10 +179,28 @@ public class Main extends javax.swing.JFrame {
         );
         pnlMainLayout.setVerticalGroup(
             pnlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 706, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        getContentPane().add(pnlMain, java.awt.BorderLayout.CENTER);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(pnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, 697, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -207,7 +224,11 @@ public class Main extends javax.swing.JFrame {
             pnlAllojtaments = new PanelLlistaAllojtaments(authenticatedUser.getId(), this);
             pnlMain.removeAll();
             pnlMain.add(pnlAllojtaments);
+            pnlMain.setVisible(true);
+            pnlMain.validate();
             pnlMain.repaint();
+            pnlMain.setSize(400, 700);
+            this.setSize(750, 800);
         }
     }//GEN-LAST:event_btnShowLoginDialogActionPerformed
 
@@ -245,7 +266,7 @@ public class Main extends javax.swing.JFrame {
         pnlMain.add(pnlDetallAllotjament);
         pnlMain.repaint();
         pnlMain.setSize(400, 700);
-        this.setSize(900, 800);
+        this.setSize(700, 800);
     }
 
     public void showPnlLlistaAllotjaments() {
@@ -253,7 +274,7 @@ public class Main extends javax.swing.JFrame {
         pnlMain.add(pnlAllojtaments);
         pnlMain.repaint();
         pnlMain.setSize(400, 700);
-        this.setSize(600, 700);
+        this.setSize(700, 900);
     }
 
     public void showPnlInsertAllotjament() {
@@ -262,7 +283,7 @@ public class Main extends javax.swing.JFrame {
         pnlMain.add(pnlInsertAllotjament);
         pnlMain.repaint();
         pnlMain.setSize(400, 700);
-        this.setSize(600, 700);
+        this.setSize(700, 700);
 
     }
 

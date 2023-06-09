@@ -141,7 +141,7 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
         );
 
         add(jPanel1);
-        jPanel1.setBounds(30, 420, 410, 160);
+        jPanel1.setBounds(40, 420, 410, 160);
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-back-24 (1).png"))); // NOI18N
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -159,65 +159,65 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
         btnPrevImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-back-24 (1).png"))); // NOI18N
         btnPrevImage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         add(btnPrevImage);
-        btnPrevImage.setBounds(340, 590, 40, 31);
+        btnPrevImage.setBounds(350, 590, 40, 31);
 
         btnNextImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-adelante-24 (2).png"))); // NOI18N
         btnNextImage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         add(btnNextImage);
-        btnNextImage.setBounds(400, 590, 40, 31);
+        btnNextImage.setBounds(410, 590, 40, 31);
 
         chkAutoMan.setText("Auto");
         chkAutoMan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         chkAutoMan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-play-24.png"))); // NOI18N
         chkAutoMan.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-pausa-24 (1).png"))); // NOI18N
         add(chkAutoMan);
-        chkAutoMan.setBounds(30, 590, 80, 28);
+        chkAutoMan.setBounds(40, 590, 80, 28);
 
         lblImageFileName.setText("Nom del fitxer de imatge i tamany en KB");
         lblImageFileName.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         add(lblImageFileName);
-        lblImageFileName.setBounds(160, 590, 170, 30);
+        lblImageFileName.setBounds(170, 590, 170, 30);
 
         jLabelnom.setText("Nom:");
         add(jLabelnom);
-        jLabelnom.setBounds(30, 120, 30, 16);
+        jLabelnom.setBounds(40, 120, 30, 16);
 
         txtNom.setText("jTextField1");
         add(txtNom);
-        txtNom.setBounds(30, 140, 137, 22);
+        txtNom.setBounds(40, 140, 137, 22);
 
         txtAdressa.setText("jTextField1");
         add(txtAdressa);
-        txtAdressa.setBounds(30, 200, 137, 22);
+        txtAdressa.setBounds(40, 200, 137, 22);
 
         jLabelAdressa.setText("Adressa:");
         add(jLabelAdressa);
-        jLabelAdressa.setBounds(30, 180, 44, 16);
+        jLabelAdressa.setBounds(40, 180, 44, 16);
 
         txtDescripcio.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtDescripcio.setText("jTextField1");
         add(txtDescripcio);
-        txtDescripcio.setBounds(30, 320, 410, 82);
+        txtDescripcio.setBounds(40, 320, 410, 82);
 
         jLabelDescripcio.setText("Descripcio: ");
         add(jLabelDescripcio);
-        jLabelDescripcio.setBounds(30, 300, 61, 16);
+        jLabelDescripcio.setBounds(40, 300, 61, 16);
 
         jLabelMunicipi.setText("Municipi: ");
         add(jLabelMunicipi);
-        jLabelMunicipi.setBounds(30, 240, 53, 16);
+        jLabelMunicipi.setBounds(40, 240, 53, 16);
 
         txtValoracio.setText("jTextField1");
         add(txtValoracio);
-        txtValoracio.setBounds(190, 140, 71, 22);
+        txtValoracio.setBounds(200, 140, 71, 22);
 
         jLabelValoracio.setText("Valoració:");
         add(jLabelValoracio);
-        jLabelValoracio.setBounds(190, 120, 52, 16);
+        jLabelValoracio.setBounds(200, 120, 52, 16);
 
         jLabelPreu.setText("Preu:");
         add(jLabelPreu);
-        jLabelPreu.setBounds(280, 120, 27, 16);
+        jLabelPreu.setBounds(290, 120, 27, 16);
 
         jButtonActualitzar.setText("Actualitzar");
         jButtonActualitzar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -227,19 +227,19 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
             }
         });
         add(jButtonActualitzar);
-        jButtonActualitzar.setBounds(600, 20, 137, 30);
+        jButtonActualitzar.setBounds(370, 20, 110, 30);
 
         jLabelNumPers.setText("Nº de Personas:");
         add(jLabelNumPers);
-        jLabelNumPers.setBounds(360, 120, 83, 16);
+        jLabelNumPers.setBounds(370, 120, 83, 16);
         add(spnNumPersones);
-        spnNumPersones.setBounds(360, 140, 84, 22);
+        spnNumPersones.setBounds(370, 140, 84, 22);
         add(spnPreu);
-        spnPreu.setBounds(280, 140, 64, 22);
+        spnPreu.setBounds(290, 140, 64, 22);
 
         cmbMunicipi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alaró", "Inca" }));
         add(cmbMunicipi);
-        cmbMunicipi.setBounds(30, 270, 137, 22);
+        cmbMunicipi.setBounds(40, 270, 137, 22);
 
         pnlServeis.setBorder(javax.swing.BorderFactory.createTitledBorder("Serveis"));
 
@@ -294,7 +294,7 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
         );
 
         add(pnlServeis);
-        pnlServeis.setBounds(180, 180, 260, 110);
+        pnlServeis.setBounds(190, 180, 260, 110);
 
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, 18));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -302,7 +302,7 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-información-del-hotel-48 (1).png"))); // NOI18N
         jLabel1.setText("Detalls de l'Allotjament");
         add(jLabel1);
-        jLabel1.setBounds(80, 10, 330, 50);
+        jLabel1.setBounds(80, 10, 290, 50);
 
         jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
         add(jSeparator1);
@@ -316,7 +316,7 @@ public class PanelDetallAllotjament extends javax.swing.JPanel {
             }
         });
         add(btnComentaris);
-        btnComentaris.setBounds(345, 80, 100, 23);
+        btnComentaris.setBounds(350, 80, 100, 23);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

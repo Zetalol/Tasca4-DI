@@ -12,7 +12,7 @@ import spdvid.garciajodar_tarea1.dto.Usuari;
 public class LoginDialog extends javax.swing.JDialog {
 
     DataAccess da;
-    
+
     /**
      * Creates new form LoginDialog
      */
@@ -38,10 +38,10 @@ public class LoginDialog extends javax.swing.JDialog {
         txtPassword = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
         lblLoginErrorMessage = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel3 = new javax.swing.JLabel();
+        lblUsuari = new javax.swing.JLabel();
+        lblContrasenya = new javax.swing.JLabel();
+        separatorLogin = new javax.swing.JSeparator();
+        lblTitleLogin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -65,40 +65,45 @@ public class LoginDialog extends javax.swing.JDialog {
         getContentPane().add(btnLogin);
         btnLogin.setBounds(110, 260, 180, 23);
 
+        lblLoginErrorMessage.setFont(lblLoginErrorMessage.getFont().deriveFont(lblLoginErrorMessage.getFont().getStyle() | java.awt.Font.BOLD));
         lblLoginErrorMessage.setForeground(new java.awt.Color(255, 51, 51));
-        lblLoginErrorMessage.setText("Login failed. Try again!");
+        lblLoginErrorMessage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblLoginErrorMessage.setText("Datos erroneos. Vuelve a intentarlo.");
         getContentPane().add(lblLoginErrorMessage);
-        lblLoginErrorMessage.setBounds(110, 90, 180, 16);
+        lblLoginErrorMessage.setBounds(100, 90, 210, 16);
 
-        jLabel1.setText("Usuari");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(110, 120, 180, 16);
+        lblUsuari.setText("Usuari");
+        getContentPane().add(lblUsuari);
+        lblUsuari.setBounds(110, 120, 180, 16);
 
-        jLabel2.setText("Contrasenya:");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(110, 190, 180, 16);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(0, 80, 410, 20);
+        lblContrasenya.setText("Contrasenya:");
+        getContentPane().add(lblContrasenya);
+        lblContrasenya.setBounds(110, 190, 180, 16);
+        getContentPane().add(separatorLogin);
+        separatorLogin.setBounds(0, 80, 410, 20);
 
-        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD, 18));
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-accede-redondeado-derecho-48.png"))); // NOI18N
-        jLabel3.setText("Login");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 360, 70);
+        lblTitleLogin.setFont(lblTitleLogin.getFont().deriveFont(lblTitleLogin.getFont().getStyle() | java.awt.Font.BOLD, 18));
+        lblTitleLogin.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitleLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitleLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-accede-redondeado-derecho-48.png"))); // NOI18N
+        lblTitleLogin.setText("Login");
+        getContentPane().add(lblTitleLogin);
+        lblTitleLogin.setBounds(0, 0, 360, 70);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         Usuari user = null;
         user = da.getUser(txtEmail.getText());
-        if (user != null) {
-            ((Main)getParent()).userLoggedIn(user);
+        char[] input = txtPassword.getPassword();
+        String password = new String(input);
+        System.out.println(user.getPassword() + " ----- " + password);
+        
+        if (user != null && user.getPassword().contentEquals(password)) {
+            ((Main) getParent()).userLoggedIn(user);
             setVisible(false);
-        }
-        else {
+        } else {
             lblLoginErrorMessage.setVisible(true);
         }
     }//GEN-LAST:event_btnLoginActionPerformed
@@ -147,11 +152,11 @@ public class LoginDialog extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel lblContrasenya;
     private javax.swing.JLabel lblLoginErrorMessage;
+    private javax.swing.JLabel lblTitleLogin;
+    private javax.swing.JLabel lblUsuari;
+    private javax.swing.JSeparator separatorLogin;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables

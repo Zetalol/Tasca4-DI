@@ -31,10 +31,11 @@ public class ComentariDialog extends javax.swing.JDialog {
         this.allotjament = allotjament;
         this.user = user;
         setLocationRelativeTo(null);
-        setSize(new java.awt.Dimension(400, 370));
+        setSize(new java.awt.Dimension(370, 450));
         da = new DataAccess();
         comentaris = da.getComentaris(allotjament.getId());
         JComboBox<Comentari> comboComentari = new JComboBox<>(comentaris.toArray(new Comentari[0]));
+        initComentaris();
 
     }
 
@@ -104,6 +105,7 @@ public class ComentariDialog extends javax.swing.JDialog {
         getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(30, 260, 270, 86);
 
+        comboComentari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(comboComentari);
         comboComentari.setBounds(230, 100, 72, 22);
 
@@ -112,11 +114,12 @@ public class ComentariDialog extends javax.swing.JDialog {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
 
-        Comentari resposta = new Comentari();
-        resposta.setText(txaResposta.getText());
-        resposta.setIdAllotjament(allotjament.getId());
-        resposta.setIdUsuari(user.getId());
-        resposta.setIdComentariPare(idComentari);
+        
+        da.insertComentari(txaResposta.getText(), user.getId(), allotjament.getId(), idComentari);
+        
+        System.out.println("Comentario insertado con exito.");
+        setVisible(false);
+        
         
         
     }//GEN-LAST:event_btnLoginActionPerformed
@@ -153,9 +156,9 @@ public class ComentariDialog extends javax.swing.JDialog {
     }
 
     private void initComentaris() {
-        DefaultComboBoxModel<Integer> comboBoxModel = new DefaultComboBoxModel<>();
+        DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>();
         for (Comentari comentari : comentaris) {
-            comboBoxModel.addElement(comentari.getId());
+            comboBoxModel.addElement(Integer.toString(comentari.getId()));
         }
         comboComentari.setModel(comboBoxModel);
 
@@ -176,7 +179,7 @@ public class ComentariDialog extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
-    private javax.swing.JComboBox<Integer> comboComentari;
+    private javax.swing.JComboBox<String> comboComentari;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

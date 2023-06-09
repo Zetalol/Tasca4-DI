@@ -42,7 +42,6 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
 
         setPreferredSize(new java.awt.Dimension(780, 490));
-        setLayout(null);
 
         tblAllotjaments.setForeground(new java.awt.Color(255, 255, 255));
         tblAllotjaments.setModel(new javax.swing.table.DefaultTableModel(
@@ -66,9 +65,6 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblAllotjaments);
 
-        add(jScrollPane2);
-        jScrollPane2.setBounds(10, 120, 590, 402);
-
         btnShowInsertPanel.setForeground(new java.awt.Color(255, 255, 255));
         btnShowInsertPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-más-24.png"))); // NOI18N
         btnShowInsertPanel.setText("Nou");
@@ -78,26 +74,54 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
                 btnShowInsertPanelActionPerformed(evt);
             }
         });
-        add(btnShowInsertPanel);
-        btnShowInsertPanel.setBounds(10, 80, 90, 30);
 
         lblNumEstabliments.setForeground(new java.awt.Color(255, 255, 255));
         lblNumEstabliments.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblNumEstabliments.setText("S'han trobat x establiments.");
-        add(lblNumEstabliments);
-        lblNumEstabliments.setBounds(20, 90, 580, 16);
 
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, 18));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-dormitorio-48.png"))); // NOI18N
         jLabel1.setText("Els Teus Allotjaments");
-        add(jLabel1);
-        jLabel1.setBounds(10, 15, 600, 40);
 
         jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
-        add(jSeparator1);
-        jSeparator1.setBounds(-10, 70, 630, 10);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lblNumEstabliments, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnShowInsertPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lblNumEstabliments))
+                    .addComponent(btnShowInsertPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblAllotjamentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAllotjamentsMouseClicked
