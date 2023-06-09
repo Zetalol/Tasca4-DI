@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import spdvid.evtmallorca.dataaccess.DataAccess;
 import spdvid.evtmallorca.dto.Allotjament;
 import spdvid.evtmallorca.dto.Comentari;
@@ -48,11 +49,11 @@ public class ComentariDialog extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnLogin = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        txtResposta = new javax.swing.JLabel();
+        btnRespuesta = new javax.swing.JButton();
+        lblComentari = new javax.swing.JLabel();
+        lblResposta = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        txtTitle = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txaComentaris = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -64,32 +65,40 @@ public class ComentariDialog extends javax.swing.JDialog {
         setSize(new java.awt.Dimension(400, 300));
         getContentPane().setLayout(null);
 
-        btnLogin.setText("Contestar");
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+        btnRespuesta.setFont(btnRespuesta.getFont().deriveFont(btnRespuesta.getFont().getStyle() | java.awt.Font.BOLD));
+        btnRespuesta.setForeground(new java.awt.Color(255, 255, 255));
+        btnRespuesta.setText("Contestar");
+        btnRespuesta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
+                btnRespuestaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogin);
-        btnLogin.setBounds(70, 360, 180, 30);
+        getContentPane().add(btnRespuesta);
+        btnRespuesta.setBounds(70, 360, 180, 30);
 
-        jLabel1.setText("Comentaris:");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(30, 100, 180, 16);
+        lblComentari.setForeground(new java.awt.Color(255, 255, 255));
+        lblComentari.setText("Comentaris:");
+        getContentPane().add(lblComentari);
+        lblComentari.setBounds(30, 100, 180, 16);
 
-        txtResposta.setText("Resposta:");
-        getContentPane().add(txtResposta);
-        txtResposta.setBounds(30, 230, 60, 20);
+        lblResposta.setForeground(new java.awt.Color(255, 255, 255));
+        lblResposta.setText("Resposta:");
+        getContentPane().add(lblResposta);
+        lblResposta.setBounds(30, 230, 60, 20);
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(0, 80, 510, 20);
 
-        txtTitle.setFont(txtTitle.getFont().deriveFont(txtTitle.getFont().getStyle() | java.awt.Font.BOLD, 18));
-        txtTitle.setForeground(new java.awt.Color(255, 255, 255));
-        txtTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-burbuja-de-diálogo-con-puntos-48.png"))); // NOI18N
-        txtTitle.setText("Comentaris");
-        getContentPane().add(txtTitle);
-        txtTitle.setBounds(0, 0, 290, 70);
+        lblTitle.setFont(lblTitle.getFont().deriveFont(lblTitle.getFont().getStyle() | java.awt.Font.BOLD, 18));
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-burbuja-de-diálogo-con-puntos-48.png"))); // NOI18N
+        lblTitle.setText("Comentaris");
+        getContentPane().add(lblTitle);
+        lblTitle.setBounds(0, 0, 330, 80);
+
+        jScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
 
         txaComentaris.setColumns(20);
         txaComentaris.setRows(5);
@@ -98,6 +107,8 @@ public class ComentariDialog extends javax.swing.JDialog {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(30, 130, 270, 86);
 
+        jScrollPane2.setForeground(new java.awt.Color(255, 255, 255));
+
         txaResposta.setColumns(20);
         txaResposta.setRows(5);
         jScrollPane2.setViewportView(txaResposta);
@@ -105,6 +116,7 @@ public class ComentariDialog extends javax.swing.JDialog {
         getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(30, 260, 270, 86);
 
+        comboComentari.setForeground(new java.awt.Color(255, 255, 255));
         comboComentari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(comboComentari);
         comboComentari.setBounds(230, 100, 72, 22);
@@ -112,17 +124,16 @@ public class ComentariDialog extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+    private void btnRespuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRespuestaActionPerformed
 
         
         da.insertComentari(txaResposta.getText(), user.getId(), allotjament.getId(), idComentari);
-        
-        System.out.println("Comentario insertado con exito.");
+        JOptionPane.showMessageDialog(null, "Resposta enviada.", "Confirmar", JOptionPane.INFORMATION_MESSAGE);
         setVisible(false);
         
         
         
-    }//GEN-LAST:event_btnLoginActionPerformed
+    }//GEN-LAST:event_btnRespuestaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,15 +189,15 @@ public class ComentariDialog extends javax.swing.JDialog {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnRespuesta;
     private javax.swing.JComboBox<String> comboComentari;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel lblComentari;
+    private javax.swing.JLabel lblResposta;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JTextArea txaComentaris;
     private javax.swing.JTextArea txaResposta;
-    private javax.swing.JLabel txtResposta;
-    private javax.swing.JLabel txtTitle;
     // End of variables declaration//GEN-END:variables
 }

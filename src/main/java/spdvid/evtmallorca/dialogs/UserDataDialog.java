@@ -1,5 +1,6 @@
 package spdvid.evtmallorca.dialogs;
 
+import javax.swing.JOptionPane;
 import spdvid.evtmallorca.dataaccess.DataAccess;
 import spdvid.garciajodar_tarea1.dto.Usuari;
 
@@ -52,26 +53,33 @@ public class UserDataDialog extends javax.swing.JDialog {
         setSize(new java.awt.Dimension(400, 300));
         getContentPane().setLayout(null);
 
+        txtLlinatges.setForeground(new java.awt.Color(255, 255, 255));
         txtLlinatges.setText("eforbearb@ucsd.edu");
         getContentPane().add(txtLlinatges);
-        txtLlinatges.setBounds(200, 130, 180, 22);
+        txtLlinatges.setBounds(200, 120, 180, 22);
 
+        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
         btnUpdate.setText("Actualitzar");
+        btnUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
         getContentPane().add(btnUpdate);
-        btnUpdate.setBounds(100, 270, 180, 23);
+        btnUpdate.setBounds(100, 240, 180, 30);
 
-        lblNom.setText("Nom");
+        lblNom.setForeground(new java.awt.Color(255, 255, 255));
+        lblNom.setText("Nom:");
         getContentPane().add(lblNom);
         lblNom.setBounds(10, 100, 180, 16);
 
-        lblLlinatges.setText("Llinatges");
+        lblLlinatges.setForeground(new java.awt.Color(255, 255, 255));
+        lblLlinatges.setText("Llinatges:");
         getContentPane().add(lblLlinatges);
         lblLlinatges.setBounds(200, 100, 180, 16);
+
+        separator.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(separator);
         separator.setBounds(0, 80, 410, 20);
 
@@ -83,23 +91,29 @@ public class UserDataDialog extends javax.swing.JDialog {
         getContentPane().add(lblTitle);
         lblTitle.setBounds(0, 0, 390, 70);
 
+        txtNom.setForeground(new java.awt.Color(255, 255, 255));
         txtNom.setText("eforbearb@ucsd.edu");
         getContentPane().add(txtNom);
-        txtNom.setBounds(10, 130, 170, 22);
+        txtNom.setBounds(10, 120, 170, 22);
 
+        txtEmail2.setForeground(new java.awt.Color(255, 255, 255));
         txtEmail2.setText("eforbearb@ucsd.edu");
         getContentPane().add(txtEmail2);
-        txtEmail2.setBounds(10, 210, 170, 22);
+        txtEmail2.setBounds(10, 180, 170, 22);
 
-        txtEmail.setText("Email");
+        txtEmail.setForeground(new java.awt.Color(255, 255, 255));
+        txtEmail.setText("Email:");
         getContentPane().add(txtEmail);
-        txtEmail.setBounds(10, 180, 180, 16);
-        getContentPane().add(txtPassword);
-        txtPassword.setBounds(200, 210, 180, 22);
+        txtEmail.setBounds(10, 160, 180, 16);
 
-        lblPassword.setText("Contrasenya");
+        txtPassword.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(txtPassword);
+        txtPassword.setBounds(200, 180, 180, 22);
+
+        lblPassword.setForeground(new java.awt.Color(255, 255, 255));
+        lblPassword.setText("Contrasenya:");
         getContentPane().add(lblPassword);
-        lblPassword.setBounds(200, 180, 180, 16);
+        lblPassword.setBounds(200, 160, 180, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -109,15 +123,17 @@ public class UserDataDialog extends javax.swing.JDialog {
         user.setLlinatges(txtLlinatges.getText());
         user.setEmail(txtEmail.getText());
         user.setPassword(txtPassword.getText());
-        
-        
         da.updateUser(user);
+        JOptionPane.showMessageDialog(null, "Dades actualitzades correctament.", "Confirmar", JOptionPane.INFORMATION_MESSAGE);
+        setVisible(false);
+
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void llenarDatos(){
         txtNom.setText(user.getNom());
         txtLlinatges.setText(user.getLlinatges());
         txtEmail.setText(user.getEmail());
+       
       
     }
     

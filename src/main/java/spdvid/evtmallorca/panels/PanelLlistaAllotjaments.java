@@ -1,5 +1,6 @@
 package spdvid.evtmallorca.panels;
 
+import java.awt.Color;
 import spdvid.evtmallorca.Main;
 import spdvid.evtmallorca.dataaccess.DataAccess;
 import spdvid.evtmallorca.dto.Allotjament;
@@ -9,19 +10,20 @@ import spdvid.evtmallorca.tablemodels.AllotjamentTableModel;
  *
  * @author Miguel
  */
-public class PanelLlistaAllojtaments extends javax.swing.JPanel {
+public class PanelLlistaAllotjaments extends javax.swing.JPanel {
     private DataAccess da = new DataAccess();
     private Main mainJFrame = null;
     
     /**
      * Creates new form pnlAllojtaments
      */
-    public PanelLlistaAllojtaments(int userId, Main mainJFrame) {
+    public PanelLlistaAllotjaments(int userId, Main mainJFrame) {
         initComponents();
         this.mainJFrame = mainJFrame;
         setSize(780, 490);
         tblAllotjaments.setModel(new AllotjamentTableModel((da.getAllotjaments(userId)))); 
         int total = tblAllotjaments.getRowCount();
+        lblNumEstabliments.setForeground(Color.GREEN);
         lblNumEstabliments.setText("S'han trobat " + total + " establiments.");
     }
 
@@ -41,7 +43,8 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
 
-        setPreferredSize(new java.awt.Dimension(780, 490));
+        setPreferredSize(new java.awt.Dimension(640, 550));
+        setLayout(null);
 
         tblAllotjaments.setForeground(new java.awt.Color(255, 255, 255));
         tblAllotjaments.setModel(new javax.swing.table.DefaultTableModel(
@@ -65,6 +68,10 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblAllotjaments);
 
+        add(jScrollPane2);
+        jScrollPane2.setBounds(20, 120, 590, 402);
+
+        btnShowInsertPanel.setFont(btnShowInsertPanel.getFont().deriveFont(btnShowInsertPanel.getFont().getStyle() | java.awt.Font.BOLD));
         btnShowInsertPanel.setForeground(new java.awt.Color(255, 255, 255));
         btnShowInsertPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-más-24.png"))); // NOI18N
         btnShowInsertPanel.setText("Nou");
@@ -74,54 +81,26 @@ public class PanelLlistaAllojtaments extends javax.swing.JPanel {
                 btnShowInsertPanelActionPerformed(evt);
             }
         });
+        add(btnShowInsertPanel);
+        btnShowInsertPanel.setBounds(20, 80, 90, 30);
 
         lblNumEstabliments.setForeground(new java.awt.Color(255, 255, 255));
         lblNumEstabliments.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblNumEstabliments.setText("S'han trobat x establiments.");
+        add(lblNumEstabliments);
+        lblNumEstabliments.setBounds(30, 90, 580, 16);
 
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, 18));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-dormitorio-48.png"))); // NOI18N
         jLabel1.setText("Els Teus Allotjaments");
+        add(jLabel1);
+        jLabel1.setBounds(20, 20, 600, 40);
 
-        jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(lblNumEstabliments, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnShowInsertPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(lblNumEstabliments))
-                    .addComponent(btnShowInsertPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        add(jSeparator1);
+        jSeparator1.setBounds(0, 70, 910, 10);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblAllotjamentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAllotjamentsMouseClicked

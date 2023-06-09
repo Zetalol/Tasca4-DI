@@ -21,7 +21,7 @@ public class LoginDialog extends javax.swing.JDialog {
         initComponents();
         lblLoginErrorMessage.setVisible(false);
         setLocationRelativeTo(null);
-        setSize(new java.awt.Dimension(400, 370));
+        setSize(new java.awt.Dimension(300, 370));
         da = new DataAccess();
     }
 
@@ -48,39 +48,48 @@ public class LoginDialog extends javax.swing.JDialog {
         setSize(new java.awt.Dimension(400, 300));
         getContentPane().setLayout(null);
 
+        txtEmail.setForeground(new java.awt.Color(255, 255, 255));
         txtEmail.setText("eforbearb@ucsd.edu");
         getContentPane().add(txtEmail);
-        txtEmail.setBounds(110, 150, 180, 22);
+        txtEmail.setBounds(50, 140, 180, 22);
 
+        txtPassword.setForeground(new java.awt.Color(255, 255, 255));
         txtPassword.setText("oSko03");
         getContentPane().add(txtPassword);
-        txtPassword.setBounds(110, 210, 180, 22);
+        txtPassword.setBounds(50, 200, 180, 22);
 
+        btnLogin.setFont(btnLogin.getFont().deriveFont(btnLogin.getFont().getStyle() | java.awt.Font.BOLD));
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Login");
+        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
             }
         });
         getContentPane().add(btnLogin);
-        btnLogin.setBounds(110, 260, 180, 23);
+        btnLogin.setBounds(50, 250, 180, 30);
 
         lblLoginErrorMessage.setFont(lblLoginErrorMessage.getFont().deriveFont(lblLoginErrorMessage.getFont().getStyle() | java.awt.Font.BOLD));
         lblLoginErrorMessage.setForeground(new java.awt.Color(255, 51, 51));
         lblLoginErrorMessage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblLoginErrorMessage.setText("Datos erroneos. Vuelve a intentarlo.");
         getContentPane().add(lblLoginErrorMessage);
-        lblLoginErrorMessage.setBounds(100, 90, 210, 16);
+        lblLoginErrorMessage.setBounds(40, 90, 210, 16);
 
-        lblUsuari.setText("Usuari");
+        lblUsuari.setForeground(new java.awt.Color(255, 255, 255));
+        lblUsuari.setText("Usuari:");
         getContentPane().add(lblUsuari);
-        lblUsuari.setBounds(110, 120, 180, 16);
+        lblUsuari.setBounds(50, 120, 180, 16);
 
+        lblContrasenya.setForeground(new java.awt.Color(255, 255, 255));
         lblContrasenya.setText("Contrasenya:");
         getContentPane().add(lblContrasenya);
-        lblContrasenya.setBounds(110, 190, 180, 16);
+        lblContrasenya.setBounds(50, 180, 180, 16);
+
+        separatorLogin.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(separatorLogin);
-        separatorLogin.setBounds(0, 80, 410, 20);
+        separatorLogin.setBounds(-50, 70, 470, 20);
 
         lblTitleLogin.setFont(lblTitleLogin.getFont().deriveFont(lblTitleLogin.getFont().getStyle() | java.awt.Font.BOLD, 18));
         lblTitleLogin.setForeground(new java.awt.Color(255, 255, 255));
@@ -88,7 +97,7 @@ public class LoginDialog extends javax.swing.JDialog {
         lblTitleLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-accede-redondeado-derecho-48.png"))); // NOI18N
         lblTitleLogin.setText("Login");
         getContentPane().add(lblTitleLogin);
-        lblTitleLogin.setBounds(0, 0, 360, 70);
+        lblTitleLogin.setBounds(-50, 0, 360, 70);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
