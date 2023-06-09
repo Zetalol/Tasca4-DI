@@ -1,1 +1,16 @@
 # etvmallorca
+- Cambiat Look and Feel de l'aplicació per FlatDarculaLaf.
+- Cambiada la Font de l'aplicació per Roboto.
+- Alterat el diseny del Main frame.
+- Alterat el diseny del PanelDetallAllotjament.
+- Alterat el diseny del PanelLlistaAllotjament.
+- Afegit label a PanelLlistaAllotjament que informa del nombre d'Allotjaments trobats.
+- Alterat el diseny del PanelInsertAllotjament.
+- Alterat el diseny del LoginDialog.
+- Afegit Icones a Buttons y Labels dels diferents Panels.
+- Creat UserDataDialog per a poder actualitzar les dades del usuari connectat.
+- Creat Metode updateUser al DataAccess per a poder actualitzar les dades.
+- Creat ComentariDialog amb funcionalitat per a poder respondre a un comentari concret.
+- Afegit Missatge d'error de dades al LoginDialog si la contrasenya es erronea.
+- Afegit Missatge de confirmació al actualitzar les dades de l'usuari.
+- Afegit Missatge de confirmacio al enviar una resposta a un comentari.

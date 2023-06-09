@@ -91,7 +91,7 @@ public class Main extends javax.swing.JFrame {
 
         btnShowLoginDialog.setFont(btnShowLoginDialog.getFont().deriveFont(btnShowLoginDialog.getFont().getStyle() | java.awt.Font.BOLD));
         btnShowLoginDialog.setForeground(new java.awt.Color(255, 255, 255));
-        btnShowLoginDialog.setText("Login");
+        btnShowLoginDialog.setText("Conectar");
         btnShowLoginDialog.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnShowLoginDialog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +101,7 @@ public class Main extends javax.swing.JFrame {
 
         btnLogout.setFont(btnLogout.getFont().deriveFont(btnLogout.getFont().getStyle() | java.awt.Font.BOLD));
         btnLogout.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogout.setText("Sign out");
+        btnLogout.setText("Desconectar");
         btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,6 +248,7 @@ public class Main extends javax.swing.JFrame {
         btnShowLoginDialog.setEnabled(true);
         btnLogout.setEnabled(false);
         btnUserData.setEnabled(false);
+        lblWelcomeMessage.setForeground(Color.red);
         lblWelcomeMessage.setText("Sin Conexion");
         pnlMain.removeAll();
         pnlMain.repaint();
